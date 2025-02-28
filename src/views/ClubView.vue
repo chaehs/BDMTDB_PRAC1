@@ -6,7 +6,7 @@ import { onMounted } from 'vue';
 
 
 <template>
-    club
+    club0000000
 </template>
 
 
