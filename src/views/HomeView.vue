@@ -3,11 +3,11 @@ import SeoulMap from '../components/SeoulMap.vue';
 import { ref, onMounted, computed, watch } from 'vue';
 import VueApexCharts from "vue3-apexcharts";
 import membersData from '@/assets/members_temp';
-import { useRegionStore } from '@/stores/regionStore';
+import { useMyInfoStore } from '@/stores/myInfoStore';
 import { storeToRefs } from 'pinia';
 
-const regionStore = useRegionStore();
-const { myRegions } = storeToRefs(regionStore);
+const myInfoStore = useMyInfoStore();
+const { myRegions } = storeToRefs(myInfoStore);
 
 const selectedRegionsEng = ref([]);
 
@@ -137,7 +137,7 @@ function receivedDataFromSeoulMap(selectedRegions) {
     selectedRegionsEng.value = selectedRegions;
     console.log('selectedRegionsEng.value.length:', selectedRegionsEng.value.length)
     getMembersData(selectedRegions);
-    regionStore.updateRegions(selectedRegions); // 스토어 업데이트
+    myInfoStore.updateRegions(selectedRegions); // 스토어 업데이트
 }
 
 

@@ -5,12 +5,12 @@ import { supabase } from './lib/supabaseClient'
 import ToDoList from './components/ToDoList.vue';
 import Meetup from './components/Meetup.vue'
 import meetupsData from './assets/meetups_temp'
-import { useRegionStore } from '@/stores/regionStore';
+import { useMyInfoStore } from '@/stores/myInfoStore';
 import { storeToRefs } from 'pinia';
 
 
-const regionStore = useRegionStore();
-const { myRegions } = storeToRefs(regionStore); // 반응형 참조
+const myInfoStore = useMyInfoStore();
+const { myInfo } = storeToRefs(myInfoStore); // 반응형 참조
 
 
 
