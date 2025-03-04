@@ -23,7 +23,7 @@ function toggleList() {
   <!-- 클릭 시 리스트 열기/닫기 -->
   <div class="p-4 bg-gray-100 overflow-hidden cursor-pointer" @click="toggleList">
     <div class="flex items-center mb-4">
-      <h1 class="text-xl font-bold">To-Do-List</h1>
+      <h1 class="text-xl font-bold">To-Do-List 250304</h1>
       <!-- 상태에 따라 화살표 변경 -->
       <span class="ml-2 text-lg">
         {{ isListOpen ? '⬆️' : '⬇️' }}
